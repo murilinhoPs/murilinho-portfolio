@@ -31,9 +31,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/
+    - assets/projects/
+    - assets/images/
 
   fonts:
    - family:  CustomIcons
      fonts:
-      - asset: icons/CustomIcons.ttf
+      - asset: assets/icons/CustomIcons.ttf
