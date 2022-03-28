@@ -39,7 +39,6 @@ const projectsTitles = [
   'Nike Shop UI',
   'Cyber Rider',
 ];
-
 const projectsLinks = [
   'https://galadrielf.itch.io/bloodrunner',
   'https://murilinps.itch.io/without-title',
@@ -48,6 +47,16 @@ const projectsLinks = [
   'https://gnitolo.itch.io/ben-buzz',
   'https://github.com/murilinhoPs/challenge_nike_app',
   'https://gamejolt.com/games/cyberrider/446167'
+];
+
+const projectsAssets = [
+  'assets/projects/blood_runner.md',
+  'assets/projects/without_title.md',
+  'assets/projects/pokedex.md',
+  'assets/projects/flutter_blog.md',
+  'assets/projects/ben_and_buzz.md',
+  'assets/projects/nike_shop.md',
+  'assets/projects/cyber_rider.md',
 ];
 
 const emailTitle = 'Email';
