@@ -1,12 +1,23 @@
 import 'dart:ui';
 
-const Color primaryColor = Color(0xff2bc089);
+const Color primaryColor = Color(0xff3ae9a8);
+
+const navBarDesktopMinWidth = 200.0;
+
+// Strings
+const linkedinLink = 'https://linkedin.com/in/murilinhops';
+const githubLink = 'https://github.com/murilinhoPs';
+const instagramLink = 'https://instagram.com/murilinhops';
+const twitterLink = 'https://twitter.com/PsMurilinho';
+
+const emailTitle = 'Email';
+const emailLink = 'murilinhorps@gmail.com';
 
 const socialLinks = [
-  'https://instagram.com/murilinhops',
-  'https://twitter.com/PsMurilinho',
-  'https://linkedin.com/in/murilinhops',
-  'https://github.com/murilinhoPs',
+  instagramLink,
+  twitterLink,
+  linkedinLink,
+  githubLink,
 ];
 
 const kTools = [
@@ -58,9 +69,6 @@ const projectsAssets = [
   'assets/projects/nike_shop.md',
   'assets/projects/cyber_rider.md',
 ];
-
-const emailTitle = 'Email';
-const email = 'murilinhorps@gmail.com';
 
 const resumeLinks = [
   'https://drive.google.com/file/d/1MlwslHMYIaiUhCvATxDOPrzSgINZDIAo/view?usp=sharing', //en-us
