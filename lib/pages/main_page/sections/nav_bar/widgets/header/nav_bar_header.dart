@@ -14,33 +14,30 @@ class NavBarHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.black,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Positioned(
-            top: 4,
-            left: 8,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(20),
-                ),
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        Positioned(
+          top: 4,
+          left: 8,
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(
+                Radius.circular(20),
               ),
-              child: IconButton(
-                onPressed: onChangeDevice,
-                color: primaryColor,
-                icon: Icon(
-                  Icons.notes,
-                  size: 28,
-                ),
+            ),
+            child: IconButton(
+              onPressed: onChangeDevice,
+              color: primaryColor,
+              icon: Icon(
+                Icons.notes,
+                size: 28,
               ),
             ),
           ),
-          isMobile ? HeaderMobile() : HeaderDesktop(),
-        ],
-      ),
+        ),
+        isMobile ? HeaderMobile() : HeaderDesktop(),
+      ],
     );
   }
 }

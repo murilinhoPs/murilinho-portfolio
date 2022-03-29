@@ -3,6 +3,8 @@ import 'dart:ui';
 const Color primaryColor = Color(0xff3ae9a8);
 
 const navBarDesktopMinWidth = 200.0;
+const navBarHeaderHeightDesktop = 230.0;
+const navBarHeaderHeightMobile = 160.0;
 
 // Strings
 const linkedinLink = 'https://linkedin.com/in/murilinhops';

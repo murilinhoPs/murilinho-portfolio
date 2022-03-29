@@ -30,55 +30,73 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Column(
+        Stack(
           children: [
-            Expanded(
-              flex: 3,
-              child: NavigationRail(
-                selectedIndex: _selectedIndex,
-                onDestinationSelected: (index) {
-                  setState(() {
-                    _selectedIndex = index;
-                  });
-                },
-                extended: !_isMobile,
-                backgroundColor: Color(0xff181818),
-                minExtendedWidth: navBarDesktopMinWidth,
-                labelType: NavigationRailLabelType.none,
-                leading: NavBarHeader(
-                  isMobile: _isMobile,
-                  onChangeDevice: () => setExtended(),
-                ),
-                trailing: Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
-                  child: SocialLinks(
-                    isMobile: _isMobile,
-                  ),
-                ),
-                groupAlignment: -.9,
-                destinations: [
-                  NavigationRailDestination(
-                    icon: Icon(Icons.home_outlined),
-                    selectedIcon: Icon(Icons.home),
-                    label: Text(Strings.homeNavBar),
-                  ),
-                  NavigationRailDestination(
-                    icon: Icon(Icons.work_outline),
-                    selectedIcon: Icon(Icons.work),
-                    label: Text(Strings.projectsNavBar),
-                  ),
-                  NavigationRailDestination(
-                    icon: Icon(Icons.person_outlined),
-                    selectedIcon: Icon(Icons.person),
-                    label: Text(Strings.aboutNavBar),
-                  ),
-                  NavigationRailDestination(
-                    icon: Icon(Icons.contact_page_outlined),
-                    selectedIcon: Icon(Icons.contact_page),
-                    label: Text(Strings.contactNavBar),
-                  ),
-                ],
+            Positioned(
+              top: 1,
+              bottom: 1,
+              child: Container(
+                color: Color(0xff181818),
+                height: double.infinity,
+                width: navBarDesktopMinWidth,
               ),
+            ),
+            Positioned(
+              top: 1,
+              child: Container(
+                height: _isMobile
+                    ? navBarHeaderHeightMobile
+                    : navBarHeaderHeightDesktop,
+                width: navBarDesktopMinWidth,
+                child: Material(
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            NavigationRail(
+              selectedIndex: _selectedIndex,
+              onDestinationSelected: (index) {
+                setState(() {
+                  _selectedIndex = index;
+                });
+              },
+              extended: !_isMobile,
+              backgroundColor: Colors.transparent,
+              minExtendedWidth: navBarDesktopMinWidth,
+              labelType: NavigationRailLabelType.none,
+              leading: NavBarHeader(
+                isMobile: _isMobile,
+                onChangeDevice: () => setExtended(),
+              ),
+              trailing: Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+                child: SocialLinks(
+                  isMobile: _isMobile,
+                ),
+              ),
+              groupAlignment: -.9,
+              destinations: [
+                NavigationRailDestination(
+                  icon: Icon(Icons.home_outlined),
+                  selectedIcon: Icon(Icons.home),
+                  label: Text(Strings.homeNavBar),
+                ),
+                NavigationRailDestination(
+                  icon: Icon(Icons.work_outline),
+                  selectedIcon: Icon(Icons.work),
+                  label: Text(Strings.projectsNavBar),
+                ),
+                NavigationRailDestination(
+                  icon: Icon(Icons.person_outlined),
+                  selectedIcon: Icon(Icons.person),
+                  label: Text(Strings.aboutNavBar),
+                ),
+                NavigationRailDestination(
+                  icon: Icon(Icons.contact_page_outlined),
+                  selectedIcon: Icon(Icons.contact_page),
+                  label: Text(Strings.contactNavBar),
+                ),
+              ],
             ),
           ],
         ),
