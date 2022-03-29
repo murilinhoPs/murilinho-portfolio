@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:murilinho_portfolio/assets_path.dart';
 import 'package:murilinho_portfolio/constants.dart';
 import 'package:murilinho_portfolio/strings.dart';
 
@@ -16,6 +17,7 @@ class HeaderMobile extends StatelessWidget {
         SizedBox(height: 52.0),
         const CircleAvatar(
           backgroundColor: Colors.grey,
+          foregroundImage: AssetImage(Assets.meCartoon),
           minRadius: 24,
         ),
         const SizedBox(
