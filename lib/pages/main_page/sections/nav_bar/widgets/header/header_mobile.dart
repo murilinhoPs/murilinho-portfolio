@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:murilinho_portfolio/assets_path.dart';
-import 'package:murilinho_portfolio/constants.dart';
 import 'package:murilinho_portfolio/strings.dart';
 
 class HeaderMobile extends StatelessWidget {

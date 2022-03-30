@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:murilinho_portfolio/pages/main_page/main_page.dart';
 import 'package:murilinho_portfolio/pages/project_details/project_details.dart';
 import 'package:murilinho_portfolio/pages/project_details/project_object.dart';
