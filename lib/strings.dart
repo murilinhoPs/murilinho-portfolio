@@ -29,8 +29,9 @@ class Strings {
   static const projectsSubtitle = r'''Some projects I've done so far''';
 
   static const homeSubtitle = r'''Hi! I'm Murilo Ps.''';
+  static const homeIntro = '> Game Designer and Mobile developer';
   static const homeMiniBio =
-      r'''I'm a Game Designer with focus on programming games using Unity and Unreal Engine and I'm always learning how to improve my games. I also make mobile apps in Flutter, and I'm working with Flutter now''';
+      r'''I'm a Game Designer with focus on programming games using Unity and Unreal Engine and I'm always learning how to improve my games. I also make mobile apps in Flutter, and I'm working with Flutter now!''';
 
   static const aboutMeDescription =
       r'''I´m Murilo Pescatori Souza, 22 years old and a PwD with Duchenne Muscular Dystrophy. I have a bachelor's degree in Game Design and now I'm working at a Nubank as Mobile developer. Since I was a kid I wanted to learn about Game Development, how games are made. And now I´m into this marvelous world! 
