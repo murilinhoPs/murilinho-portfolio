@@ -68,7 +68,7 @@ class HomeDesktop extends StatelessWidget {
           Expanded(
             child: ImageFadeWidget(
               imagePath: Assets.mePortrait,
-              height: 400,
+              height: 600,
             ),
           ),
         ],
