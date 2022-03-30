@@ -1,8 +1,10 @@
 import 'dart:ui';
 
+import 'package:murilinho_portfolio/assets_path.dart';
 import 'package:murilinho_portfolio/custom_icons.dart';
 
 const Color primaryColor = Color(0xff3ae9a8);
+const Color scecondaryBg = Color(0xff2c344b);
 
 const navBarDesktopMinWidth = 200.0;
 const navBarHeaderHeightDesktop = 240.0;
@@ -45,7 +47,7 @@ const kTools = [
 
 const projectsBanner = [
   'assets/images/bloor_runner.png',
-  'assets/images/brackeys_jam.png',
+  Assets.brackeysJam,
   'assets/images/pokedex.png',
   'assets/images/flutter_blog.png',
   'assets/images/ben_and_buzz.png',

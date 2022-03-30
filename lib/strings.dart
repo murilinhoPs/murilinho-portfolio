@@ -37,4 +37,7 @@ class Strings {
       r'''I´m Murilo Pescatori Souza, 22 years old and a PwD with Duchenne Muscular Dystrophy. I have a bachelor's degree in Game Design and now I'm working at a Nubank as Mobile developer. Since I was a kid I wanted to learn about Game Development, how games are made. And now I´m into this marvelous world! 
 My focus is on programming, and my goal is to be a very good programmer. During the development of a project I´m constantly learning how to improve them and I think the best way of doing this is testing with users and my friends to get feedback, this helps me on which way to improve the interactions and mechanics.
 Even though my area is coding, is important knowing all the process and principles of making games. Understanding all the process makes easier to get the feedback, and as a programmer you have to make the interaction works and how to fix it if it´s not working propperly, understanding the interaction makes easier to improve it by coding.''';
+
+  static const recentsProjectsNav = 'Recentes';
+  static const allProjectsNav = 'Ver Mais';
 }
