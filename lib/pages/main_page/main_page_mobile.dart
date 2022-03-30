@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/home/home_section.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/nav_bar/nav_bar.dart';
+import 'package:murilinho_portfolio/pages/main_page/sections/projects/projects_section.dart';
 
 class MainPageMobile extends StatelessWidget {
   @override
@@ -18,8 +19,8 @@ class MainPageMobile extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
             shrinkWrap: true,
             children: [
-              SizedBox(height: 20.0),
               HomeSection(),
+              ProjectsSection(),
             ],
           ),
         ),
