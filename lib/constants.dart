@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:murilinho_portfolio/custom_icons.dart';
+
 const Color primaryColor = Color(0xff3ae9a8);
 
 const navBarDesktopMinWidth = 200.0;
@@ -20,6 +22,13 @@ const socialLinks = [
   twitterLink,
   linkedinLink,
   githubLink,
+];
+
+const socialLinksIcons = [
+  CustomIcons.instagram,
+  CustomIcons.twitter,
+  CustomIcons.linkedin,
+  CustomIcons.github,
 ];
 
 const kTools = [
