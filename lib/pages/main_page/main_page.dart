@@ -15,6 +15,11 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ScreenTypeLayout(
+        breakpoints: ScreenBreakpoints(
+          desktop: 800,
+          tablet: 500,
+          watch: 200,
+        ),
         desktop: MainPageDesktop(),
         mobile: MainPageMobile(),
       ),

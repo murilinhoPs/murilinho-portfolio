@@ -13,7 +13,10 @@ class MainPageDesktop extends StatelessWidget {
         Expanded(
           child: ListView(
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
-            children: [HomeSection(), ProjectsSection()],
+            children: [
+              HomeSection(),
+              ProjectsSection(),
+            ],
           ),
         ),
       ],

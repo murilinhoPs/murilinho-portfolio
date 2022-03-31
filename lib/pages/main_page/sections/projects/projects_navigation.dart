@@ -21,7 +21,6 @@ class _ProjectsNavigationState extends State<ProjectsNavigation> {
     return BottomNavigationBar(
       backgroundColor: Colors.transparent,
       elevation: 0.0,
-      landscapeLayout: BottomNavigationBarLandscapeLayout.centered,
       selectedLabelStyle: TextStyle(
         decoration: TextDecoration.underline,
         decorationThickness: 2.4,

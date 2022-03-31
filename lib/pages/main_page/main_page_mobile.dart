@@ -6,20 +6,19 @@ import 'package:murilinho_portfolio/pages/main_page/sections/projects/projects_s
 class MainPageMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-
     return Stack(
       children: [
         Positioned(
           top: 0,
           bottom: 0,
-          left: width * 0.16,
+          left: 80.0,
           right: 0,
           child: ListView(
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
             shrinkWrap: true,
             children: [
               HomeSection(),
+              SizedBox(height: 24.0),
               ProjectsSection(),
             ],
           ),
