@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:murilinho_portfolio/constants.dart';
-import 'package:murilinho_portfolio/helpers.dart';
+import 'package:murilinho_portfolio/utils/constants.dart';
+import 'package:murilinho_portfolio/utils/helpers.dart';
 
 class SocialIconButtonMobile extends StatelessWidget {
   const SocialIconButtonMobile({

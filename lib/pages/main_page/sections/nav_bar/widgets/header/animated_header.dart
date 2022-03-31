@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:murilinho_portfolio/assets_path.dart';
+import 'package:murilinho_portfolio/utils/assets_path.dart';
 
 class AnimatedHeader extends StatelessWidget {
   const AnimatedHeader({

@@ -1,9 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:murilinho_portfolio/constants.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/nav_bar/widgets/header/animated_header.dart';
-import 'package:murilinho_portfolio/strings.dart';
+import 'package:murilinho_portfolio/utils/constants.dart';
+import 'package:murilinho_portfolio/utils/strings.dart';
 
 class NavBarHeader extends StatelessWidget {
   const NavBarHeader({

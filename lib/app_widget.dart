@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:murilinho_portfolio/constants.dart';
+import 'package:murilinho_portfolio/utils/constants.dart';
 import 'package:murilinho_portfolio/route/router.dart';
 import 'package:murilinho_portfolio/route/routes_names.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:murilinho_portfolio/constants.dart';
-import 'package:murilinho_portfolio/custom_icons.dart';
-import 'package:murilinho_portfolio/helpers.dart';
+import 'package:murilinho_portfolio/utils/constants.dart';
+import 'package:murilinho_portfolio/utils/custom_icons.dart';
+import 'package:murilinho_portfolio/utils/helpers.dart';
 
 class SocialLinks extends StatelessWidget {
   const SocialLinks({

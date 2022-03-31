@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:murilinho_portfolio/assets_path.dart';
-import 'package:murilinho_portfolio/constants.dart';
-import 'package:murilinho_portfolio/strings.dart';
+import 'package:murilinho_portfolio/utils/assets_path.dart';
+import 'package:murilinho_portfolio/utils/constants.dart';
+import 'package:murilinho_portfolio/utils/strings.dart';
 import 'package:murilinho_portfolio/widgets/image_fade_widget.dart';
 import 'package:murilinho_portfolio/widgets/social_icon_buttons/social_icon_button_desktop.dart';
 

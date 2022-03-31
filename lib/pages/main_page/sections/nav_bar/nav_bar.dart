@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:murilinho_portfolio/constants.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/nav_bar/widgets/header/nav_bar_header.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/nav_bar/widgets/social_links.dart';
-import 'package:murilinho_portfolio/strings.dart';
+import 'package:murilinho_portfolio/utils/constants.dart';
+import 'package:murilinho_portfolio/utils/strings.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);

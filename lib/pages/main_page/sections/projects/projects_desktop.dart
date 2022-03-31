@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:murilinho_portfolio/assets_path.dart';
-import 'package:murilinho_portfolio/constants.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/projects/projects_navigation.dart';
-import 'package:murilinho_portfolio/strings.dart';
+import 'package:murilinho_portfolio/utils/assets_path.dart';
+import 'package:murilinho_portfolio/utils/constants.dart';
+import 'package:murilinho_portfolio/utils/strings.dart';
 
 class ProjectsDesktop extends StatelessWidget {
   const ProjectsDesktop({Key? key}) : super(key: key);
@@ -12,21 +12,25 @@ class ProjectsDesktop extends StatelessWidget {
     int currentIndexPage = 0;
 
     return Padding(
-      padding: const EdgeInsets.only(left: 24.0),
+      padding: const EdgeInsets.only(left: 24.0, top: 12.0),
       child: Column(
         children: [
           Text(
             Strings.projectsSubtitle,
             style: TextStyle(
-              fontSize: 28,
+              fontSize: 32,
               fontWeight: FontWeight.bold,
-              letterSpacing: 1.2,
+              letterSpacing: 1.6,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 12.0),
-            child: ProjectsNavigation(
-              currentIndex: (index) => currentIndexPage = index,
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 12.0, horizontal: 64),
+              child: ProjectsNavigation(
+                currentIndex: (index) => currentIndexPage = index,
+              ),
             ),
           ),
           Column(

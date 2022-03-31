@@ -1,7 +1,6 @@
 import 'dart:ui';
-
-import 'package:murilinho_portfolio/assets_path.dart';
-import 'package:murilinho_portfolio/custom_icons.dart';
+import 'package:murilinho_portfolio/utils/assets_path.dart';
+import 'package:murilinho_portfolio/utils/custom_icons.dart';
 
 const Color primaryColor = Color(0xff3ae9a8);
 const Color scecondaryBg = Color(0xff2c344b);
