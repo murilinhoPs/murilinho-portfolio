@@ -68,6 +68,7 @@ class HomeMobile extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 24)
             ],
           ),
         ),

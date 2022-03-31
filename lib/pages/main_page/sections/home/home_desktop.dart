@@ -13,7 +13,6 @@ class HomeDesktop extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: 24.0),
       child: Row(
-        // alignment: Alignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
           Expanded(
@@ -65,11 +64,9 @@ class HomeDesktop extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-            child: ImageFadeWidget(
-              imagePath: Assets.mePortrait,
-              height: 600,
-            ),
+          ImageFadeWidget(
+            imagePath: Assets.mePortrait,
+            height: 560,
           ),
         ],
       ),

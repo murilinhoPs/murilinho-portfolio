@@ -12,9 +12,11 @@ class MainPageDesktop extends StatelessWidget {
         NavBar(),
         Expanded(
           child: ListView(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0),
             children: [
-              HomeSection(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: HomeSection(),
+              ),
               ProjectsSection(),
             ],
           ),
