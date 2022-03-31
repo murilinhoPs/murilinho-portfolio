@@ -1,7 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:murilinho_portfolio/constants.dart';
-import 'package:murilinho_portfolio/pages/main_page/sections/nav_bar/widgets/header/header_desktop.dart';
-import 'package:murilinho_portfolio/pages/main_page/sections/nav_bar/widgets/header/header_mobile.dart';
+import 'package:murilinho_portfolio/pages/main_page/sections/nav_bar/widgets/header/animated_header.dart';
+import 'package:murilinho_portfolio/strings.dart';
 
 class NavBarHeader extends StatelessWidget {
   const NavBarHeader({
@@ -14,18 +16,46 @@ class NavBarHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        Positioned(
-          top: 4,
-          left: 8,
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(
-                Radius.circular(20),
-              ),
-            ),
+    final animation = NavigationRail.extendedAnimation(context);
+
+    return Material(
+      color: Colors.black,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          AnimatedBuilder(
+            animation: animation,
+            builder: (context, Widget? child) {
+              print(animation.value);
+
+              return Stack(
+                children: [
+                  Positioned(
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    child: Container(
+                      height: lerpDouble(navBarHeaderHeightMobile,
+                          navBarHeaderHeightDesktop, animation.value)!,
+                      width: navBarDesktopMinWidth,
+                    ),
+                  ),
+                  AnimatedHeader(
+                    myName: isMobile
+                        ? Strings.nameNavBarMobile
+                        : Strings.nameNavBar,
+                    topSpacing: lerpDouble(52, 32, animation.value)!,
+                    avatarRadius: lerpDouble(24, 48, animation.value)!,
+                    nameFontSize: lerpDouble(12, 24, animation.value)!,
+                    roleScale: animation.value,
+                  ),
+                ],
+              );
+            },
+          ),
+          Positioned(
+            top: 4,
+            left: 8,
             child: IconButton(
               onPressed: onChangeDevice,
               color: primaryColor,
@@ -33,11 +63,11 @@ class NavBarHeader extends StatelessWidget {
                 Icons.notes,
                 size: 28,
               ),
+              splashRadius: 24,
             ),
           ),
-        ),
-        isMobile ? HeaderMobile() : HeaderDesktop(),
-      ],
+        ],
+      ),
     );
   }
 }

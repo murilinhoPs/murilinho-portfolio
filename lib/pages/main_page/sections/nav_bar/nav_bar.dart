@@ -48,9 +48,7 @@ class _NavBarState extends State<NavBar> {
             Positioned(
               top: 1,
               child: Container(
-                height: _isMobile
-                    ? navBarHeaderHeightMobile
-                    : navBarHeaderHeightDesktop,
+                height: 12,
                 width: navBarDesktopMinWidth,
                 child: Material(
                   color: Colors.black,
