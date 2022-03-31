@@ -18,12 +18,16 @@ class _NavBarState extends State<NavBar> {
   void setExtended({bool? isMobile}) =>
       setState(() => _isMobile = isMobile ?? !_isMobile);
 
+  void checkDeviceScreen() => setState(
+        () => MediaQuery.of(context).size.width < 700
+            ? _isMobile = true
+            : _isMobile = false,
+      );
+
   @override
-  void didChangeDependencies() {
-    MediaQuery.of(context).size.width < 700
-        ? _isMobile = true
-        : _isMobile = false;
-    super.didChangeDependencies();
+  void initState() {
+    WidgetsBinding.instance!.addPostFrameCallback((_) => checkDeviceScreen());
+    super.initState();
   }
 
   @override
