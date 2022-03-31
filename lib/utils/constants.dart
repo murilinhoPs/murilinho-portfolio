@@ -45,13 +45,20 @@ const kTools = [
 ];
 
 const projectsBanner = [
-  'assets/images/bloor_runner.png',
+  Assets.bloodRunner,
   Assets.brackeysJam,
-  'assets/images/pokedex.png',
-  'assets/images/flutter_blog.png',
-  'assets/images/ben_and_buzz.png',
-  'assets/images/nike.png',
-  'assets/images/cyber_rider.png',
+  Assets.pokedex,
+  Assets.blog,
+  Assets.benBuzz,
+  Assets.nike,
+];
+const projectsAssets = [
+  Assets.bloodRunnerMd,
+  Assets.brackeysJamMd,
+  Assets.pokedexMd,
+  Assets.blogMd,
+  Assets.benBuzzMd,
+  Assets.nikeMd,
 ];
 const projectsTitles = [
   'Blood Runner',
@@ -60,7 +67,6 @@ const projectsTitles = [
   'Flutter Blog',
   'Ben and Buzz',
   'Nike Shop UI',
-  'Cyber Rider',
 ];
 const projectsLinks = [
   'https://galadrielf.itch.io/bloodrunner',
@@ -69,17 +75,6 @@ const projectsLinks = [
   'https://github.com/murilinhoPs/flutter_social_blog',
   'https://gnitolo.itch.io/ben-buzz',
   'https://github.com/murilinhoPs/challenge_nike_app',
-  'https://gamejolt.com/games/cyberrider/446167'
-];
-
-const projectsAssets = [
-  'assets/projects/blood_runner.md',
-  'assets/projects/without_title.md',
-  'assets/projects/pokedex.md',
-  'assets/projects/flutter_blog.md',
-  'assets/projects/ben_and_buzz.md',
-  'assets/projects/nike_shop.md',
-  'assets/projects/cyber_rider.md',
 ];
 
 const resumeLinks = [
