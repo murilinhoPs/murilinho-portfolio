@@ -20,6 +20,7 @@ class Strings {
   static const projectsNavBar = 'Projects';
   static const contactNavBar = 'Contact';
   static const nameNavBar = 'Murilo Ps';
+  static const nameNavBarMobile = 'Murilo\nPs';
 
   static const aboutTitle = 'About';
   static const homeTitle = 'Home';
