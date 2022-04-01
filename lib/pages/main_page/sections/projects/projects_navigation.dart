@@ -30,7 +30,8 @@ class _ProjectsNavigationState extends State<ProjectsNavigation> {
             decorationThickness: 2.4,
             decorationColor: primaryColor,
           ),
-          selectedFontSize: 16.0,
+          selectedFontSize: 20.0,
+          unselectedFontSize: 16.0,
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
