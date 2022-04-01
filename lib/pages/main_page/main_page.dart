@@ -16,8 +16,8 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: ScreenTypeLayout(
         breakpoints: ScreenBreakpoints(
-          desktop: 700,
-          tablet: 500,
+          desktop: 800,
+          tablet: 620,
           watch: 200,
         ),
         desktop: MainPageDesktop(),
