@@ -19,7 +19,7 @@ class _NavBarState extends State<NavBar> {
       setState(() => _isMobile = isMobile ?? !_isMobile);
 
   void checkDeviceScreen() => setState(
-        () => MediaQuery.of(context).size.width < 700
+        () => MediaQuery.of(context).size.width < 960
             ? _isMobile = true
             : _isMobile = false,
       );

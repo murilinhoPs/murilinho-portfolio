@@ -26,8 +26,6 @@ class NavBarHeader extends StatelessWidget {
           AnimatedBuilder(
             animation: animation,
             builder: (context, Widget? child) {
-              print(animation.value);
-
               return Stack(
                 children: [
                   Positioned(
