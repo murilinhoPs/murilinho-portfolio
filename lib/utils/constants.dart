@@ -4,6 +4,7 @@ import 'package:murilinho_portfolio/utils/custom_icons.dart';
 
 const Color primaryColor = Color(0xff3ae9a8);
 const Color scecondaryBg = Color(0xff2c344b);
+const Color greyBg = Color(0xFF464B58);
 
 const navBarDesktopMinWidth = 200.0;
 const navBarHeaderHeightDesktop = 240.0;
@@ -32,7 +33,7 @@ const socialLinksIcons = [
   CustomIcons.github,
 ];
 
-const kTools = [
+const tools = [
   'Flutter',
   'Dart',
   'C++',
@@ -52,7 +53,7 @@ const projectsBanner = [
   Assets.benBuzz,
   Assets.nike,
 ];
-const projectsAssets = [
+const projectsMarkdown = [
   Assets.bloodRunnerMd,
   Assets.brackeysJamMd,
   Assets.pokedexMd,
@@ -75,6 +76,14 @@ const projectsLinks = [
   'https://github.com/murilinhoPs/flutter_social_blog',
   'https://gnitolo.itch.io/ben-buzz',
   'https://github.com/murilinhoPs/challenge_nike_app',
+];
+const projectsTechs = [
+  'Unreal and C++',
+  'Unity and C#',
+  'Flutter and Dart',
+  'Flutter and Dart',
+  'Unity and C#',
+  'Flutter and Dart',
 ];
 
 const resumeLinks = [
