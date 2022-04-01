@@ -36,7 +36,7 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
             alignment: Alignment.centerLeft,
             child: Padding(
               padding:
-                  const EdgeInsets.symmetric(vertical: 12.0, horizontal: 64),
+                  const EdgeInsets.symmetric(vertical: 8.0, horizontal: 64),
               child: ProjectsNavigation(
                 selectedFontSize: 16,
                 unselectedFontSize: 14,
@@ -49,7 +49,7 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 12.0, bottom: 32.0),
+            padding: const EdgeInsets.only(bottom: 32.0),
             child: AnimatedCrossFade(
               crossFadeState: showAllProjects
                   ? CrossFadeState.showSecond
