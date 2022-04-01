@@ -43,7 +43,7 @@ class ProjectCardMobile extends StatelessWidget {
                   alignment: Alignment.topCenter,
                   width: imageWidth,
                   height: imageHeight,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
                 SizedBox(height: 16.0),
                 Text(
@@ -65,9 +65,9 @@ class ProjectCardMobile extends StatelessWidget {
                     child: Text(
                       model.description!,
                       overflow: TextOverflow.ellipsis,
-                      maxLines: 3,
+                      maxLines: 2,
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 14,
                         letterSpacing: 1.2,
                       ),
                     ),

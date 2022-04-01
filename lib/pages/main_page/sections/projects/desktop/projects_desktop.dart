@@ -38,6 +38,8 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
               padding:
                   const EdgeInsets.symmetric(vertical: 12.0, horizontal: 64),
               child: ProjectsNavigation(
+                selectedFontSize: 20,
+                unselectedFontSize: 16,
                 currentIndex: (index) => setState(
                   () {
                     currentIndexPage = index;

@@ -48,7 +48,7 @@ class _NavBarState extends State<NavBar> {
             Positioned(
               top: 1,
               child: Container(
-                height: 12,
+                height: 100,
                 width: navBarDesktopMinWidth,
                 child: Material(
                   color: Colors.black,
@@ -66,9 +66,11 @@ class _NavBarState extends State<NavBar> {
               backgroundColor: Colors.transparent,
               minExtendedWidth: navBarDesktopMinWidth,
               labelType: NavigationRailLabelType.none,
-              leading: NavBarHeader(
-                isMobile: _isMobile,
-                onChangeDevice: () => setExtended(),
+              leading: SafeArea(
+                child: NavBarHeader(
+                  isMobile: _isMobile,
+                  onChangeDevice: () => setExtended(),
+                ),
               ),
               trailing: Padding(
                 padding: const EdgeInsets.only(top: 20.0),
@@ -76,7 +78,7 @@ class _NavBarState extends State<NavBar> {
                   isMobile: _isMobile,
                 ),
               ),
-              groupAlignment: -.9,
+              groupAlignment: -1,
               destinations: [
                 NavigationRailDestination(
                   icon: Icon(Icons.home_outlined),

@@ -6,11 +6,14 @@ import 'package:responsive_builder/responsive_builder.dart';
 class ProjectsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
-      child: ScreenTypeLayout(
-        desktop: ProjectsDesktop(),
-        mobile: ProjectsMobile(),
+    return ScreenTypeLayout(
+      desktop: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
+        child: ProjectsDesktop(),
+      ),
+      mobile: Padding(
+        padding: const EdgeInsets.only(right: 20.0),
+        child: ProjectsMobile(),
       ),
     );
   }

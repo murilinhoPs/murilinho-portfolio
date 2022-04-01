@@ -38,6 +38,8 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
               padding:
                   const EdgeInsets.symmetric(vertical: 12.0, horizontal: 64),
               child: ProjectsNavigation(
+                selectedFontSize: 16,
+                unselectedFontSize: 14,
                 currentIndex: (index) => setState(
                   () {
                     currentIndexPage = index;
@@ -90,6 +92,7 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
         projectsTitles.length,
         (i) => ProjectCardMobile(
           cardWidth: 400,
+          imageHeight: 160,
           model: ProjectModel(
             imgPath: projectsBanner[i],
             title: projectsTitles[i],

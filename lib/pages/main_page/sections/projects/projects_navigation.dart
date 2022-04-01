@@ -6,8 +6,12 @@ class ProjectsNavigation extends StatefulWidget {
   const ProjectsNavigation({
     Key? key,
     required this.currentIndex,
+    required this.selectedFontSize,
+    required this.unselectedFontSize,
   }) : super(key: key);
   final Function(int) currentIndex;
+  final double selectedFontSize;
+  final double unselectedFontSize;
 
   @override
   State<ProjectsNavigation> createState() => _ProjectsNavigationState();
@@ -23,6 +27,7 @@ class _ProjectsNavigationState extends State<ProjectsNavigation> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         BottomNavigationBar(
+          iconSize: 0.0,
           backgroundColor: Colors.transparent,
           elevation: 0.0,
           selectedLabelStyle: TextStyle(
@@ -30,8 +35,8 @@ class _ProjectsNavigationState extends State<ProjectsNavigation> {
             decorationThickness: 2.4,
             decorationColor: primaryColor,
           ),
-          selectedFontSize: 20.0,
-          unselectedFontSize: 16.0,
+          selectedFontSize: widget.selectedFontSize, //20.0,
+          unselectedFontSize: widget.unselectedFontSize, //16.0,
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(

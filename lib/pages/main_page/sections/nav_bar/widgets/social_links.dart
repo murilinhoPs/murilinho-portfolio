@@ -10,6 +10,8 @@ class SocialLinks extends StatelessWidget {
   }) : super(key: key);
   final bool isMobile;
 
+  double get iconSize => isMobile ? 14.0 : 16.0;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,8 +24,8 @@ class SocialLinks extends StatelessWidget {
         ),
       ),
       child: Wrap(
-        spacing: 8,
-        runSpacing: 20,
+        spacing: 4,
+        runSpacing: 12,
         runAlignment: WrapAlignment.center,
         alignment: WrapAlignment.center,
         crossAxisAlignment: WrapCrossAlignment.center,
@@ -33,7 +35,7 @@ class SocialLinks extends StatelessWidget {
             onPressed: () => launchURL(linkedinLink),
             icon: Icon(
               CustomIcons.linkedin,
-              size: 16.0,
+              size: iconSize,
               color: Colors.white60,
             ),
           ),
@@ -41,7 +43,7 @@ class SocialLinks extends StatelessWidget {
             onPressed: () => launchURL(githubLink),
             icon: Icon(
               CustomIcons.github,
-              size: 16.0,
+              size: iconSize,
               color: Colors.white60,
             ),
           ),
@@ -49,7 +51,7 @@ class SocialLinks extends StatelessWidget {
             onPressed: () => launchURL('mailto:$emailLink?subject=Contact'),
             icon: Icon(
               Icons.mail_outline,
-              size: 16.0,
+              size: iconSize,
               color: Colors.white60,
             ),
           ),

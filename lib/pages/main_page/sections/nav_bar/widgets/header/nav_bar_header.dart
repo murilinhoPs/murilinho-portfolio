@@ -23,6 +23,19 @@ class NavBarHeader extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
+          Positioned(
+            top: 4,
+            left: 8,
+            child: IconButton(
+              onPressed: onChangeDevice,
+              color: primaryColor,
+              icon: Icon(
+                Icons.notes,
+                size: 28,
+              ),
+              splashRadius: 24,
+            ),
+          ),
           AnimatedBuilder(
             animation: animation,
             builder: (context, Widget? child) {
@@ -50,19 +63,6 @@ class NavBarHeader extends StatelessWidget {
                 ],
               );
             },
-          ),
-          Positioned(
-            top: 4,
-            left: 8,
-            child: IconButton(
-              onPressed: onChangeDevice,
-              color: primaryColor,
-              icon: Icon(
-                Icons.notes,
-                size: 28,
-              ),
-              splashRadius: 24,
-            ),
           ),
         ],
       ),
