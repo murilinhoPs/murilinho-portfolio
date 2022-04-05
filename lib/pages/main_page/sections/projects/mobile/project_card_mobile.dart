@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/projects/model/project_model.dart';
 import 'package:murilinho_portfolio/route/routes_names.dart';
 import 'package:murilinho_portfolio/utils/constants.dart';
+import 'package:murilinho_portfolio/utils/helpers.dart';
 import 'package:murilinho_portfolio/widgets/tag_text_widget.dart';
 
 class ProjectCardMobile extends StatelessWidget {
@@ -30,10 +31,11 @@ class ProjectCardMobile extends StatelessWidget {
         elevation: 4.0,
         color: scecondaryBg,
         child: new InkWell(
-          onTap: () => Navigator.of(context).pushNamed(
-            RoutesNames.projectDetails,
-            arguments: model.projectObject,
-          ),
+          onTap: () => launchURL(model.link),
+          // onTap: () => Navigator.of(context).pushNamed(
+          //   RoutesNames.projectDetails,
+          //   arguments: model.projectObject,
+          // ),
           child: Padding(
             padding: const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 0.0),
             child: Column(
