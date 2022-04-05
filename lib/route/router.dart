@@ -13,7 +13,7 @@ class AppRouter {
           builder: (context) => MainPage(),
         );
       case RoutesNames.projectDetails:
-        final projectObject = settings.arguments as ProjectObject;
+        final projectObject = settings.arguments as ProjectObject?;
 
         return CupertinoPageRoute(
           settings: settings,
