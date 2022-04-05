@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:murilinho_portfolio/pages/main_page/sections/about/about_section.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/home/home_section.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/nav_bar/nav_bar.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/projects/projects_section.dart';
@@ -21,6 +22,7 @@ class MainPageMobile extends StatelessWidget {
                 child: HomeSection(),
               ),
               ProjectsSection(),
+              AboutSection(),
             ],
           ),
         ),
