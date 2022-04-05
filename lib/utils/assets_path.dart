@@ -1,6 +1,7 @@
 class Assets {
   static const meCartoon = 'assets/images/me_cartoon.jpeg';
   static const mePortrait = 'assets/images/eu_retrato.png';
+  static const meImgFull = 'assets/images/eu_full.jpeg';
 
   static const bloodRunner = 'assets/images/blood_runner.png';
   static const brackeysJam = 'assets/images/brackeys_jam.png';

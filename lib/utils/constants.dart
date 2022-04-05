@@ -15,7 +15,10 @@ const linkedinLink = 'https://linkedin.com/in/murilinhops';
 const githubLink = 'https://github.com/murilinhoPs';
 const instagramLink = 'https://instagram.com/murilinhops';
 const twitterLink = 'https://twitter.com/PsMurilinho';
+const resumeLink =
+    'https://drive.google.com/file/d/12WN9s3oGudnED-EEVldUcab66k5Lng06/view?usp=sharing';
 
+const linkedinTitle = 'Linkedin';
 const emailTitle = 'Email';
 const emailLink = 'murilinhorps@gmail.com';
 
@@ -40,9 +43,14 @@ const tools = [
   'Unreal Engine',
   'C#',
   'Unity',
-  'JavaScript',
   'React',
   'Clojure',
+];
+
+const experiencesAbout = [
+  'Boticario - Mobile Developer with Flutter',
+  'Nubank - Software Engineer using Flutter and Clojure',
+  'Game jams - Pogrammer in C# with Unity and C++ with Unreal Engine'
 ];
 
 const projectsBanner = [
@@ -84,9 +92,4 @@ const projectsTechs = [
   'Flutter and Dart',
   'Unity and C#',
   'Flutter and Dart',
-];
-
-const resumeLinks = [
-  'https://drive.google.com/file/d/1MlwslHMYIaiUhCvATxDOPrzSgINZDIAo/view?usp=sharing', //en-us
-  'https://drive.google.com/file/d/11k6hLupqL1_ObtB-gVECG0xpzSfjE3xe/view?usp=sharing', //pt-br
 ];

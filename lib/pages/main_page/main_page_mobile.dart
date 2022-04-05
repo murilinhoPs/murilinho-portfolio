@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/about/about_section.dart';
+import 'package:murilinho_portfolio/pages/main_page/sections/contact/contact_section.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/home/home_section.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/nav_bar/nav_bar.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/projects/projects_section.dart';
@@ -22,7 +23,16 @@ class MainPageMobile extends StatelessWidget {
                 child: HomeSection(),
               ),
               ProjectsSection(),
-              AboutSection(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: AboutSection(),
+              ),
+              SizedBox(height: 28),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                child: ContactSection(),
+              ),
+              SizedBox(height: 36.0),
             ],
           ),
         ),
