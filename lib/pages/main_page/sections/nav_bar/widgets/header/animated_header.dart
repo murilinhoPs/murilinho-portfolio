@@ -37,26 +37,26 @@ class AnimatedHeader extends StatelessWidget {
               fontSize: nameFontSize,
             ),
           ),
-          // if (roleScale != 0)
-          AnimatedAlign(
-            duration: Duration(milliseconds: 200),
-            curve: Curves.linear,
-            alignment: AlignmentDirectional.center,
-            widthFactor: roleScale,
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 12.0 * roleScale,
-                ),
-                Text(
-                  'Game and Mobile dev',
-                  style: TextStyle(
-                    fontSize: 12 * roleScale,
+          if (roleScale != 0)
+            AnimatedAlign(
+              duration: Duration(milliseconds: 200),
+              curve: Curves.linear,
+              alignment: AlignmentDirectional.center,
+              widthFactor: roleScale,
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 12.0 * roleScale,
                   ),
-                ),
-              ],
+                  Text(
+                    'Game and Mobile dev',
+                    style: TextStyle(
+                      fontSize: 12 * roleScale,
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
           const SizedBox(
             height: 16.0,
           ),
