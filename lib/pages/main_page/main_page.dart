@@ -14,14 +14,6 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: Container(
-          color: Colors.green,
-          height: 30,
-          width: 100,
-          child: Text('aaaaa'),
-        ),
-      ),
       body: ScreenTypeLayout(
         breakpoints: ScreenBreakpoints(
           desktop: 800,
