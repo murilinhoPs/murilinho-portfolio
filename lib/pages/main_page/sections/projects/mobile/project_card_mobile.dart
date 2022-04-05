@@ -38,12 +38,21 @@ class ProjectCardMobile extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 0.0),
             child: Column(
               children: [
-                Image.asset(
-                  model.imgPath,
+                Image(
+                  image: AssetImage(model.imgPath),
                   alignment: Alignment.topCenter,
                   width: imageWidth,
                   height: imageHeight,
                   fit: BoxFit.contain,
+                  loadingBuilder: (context, child, loadingProgress) {
+                    if (loadingProgress == null) {
+                      return child;
+                    }
+
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  },
                 ),
                 SizedBox(height: 16.0),
                 Text(

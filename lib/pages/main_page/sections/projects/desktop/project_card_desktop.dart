@@ -40,12 +40,21 @@ class ProjectCardDesktop extends StatelessWidget {
               children: [
                 Expanded(
                   flex: 3,
-                  child: Image.asset(
-                    model.imgPath,
+                  child: Image(
+                    image: AssetImage(model.imgPath),
                     alignment: Alignment.topCenter,
                     width: imageWidth,
                     height: imageHeight,
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
+                    loadingBuilder: (context, child, loadingProgress) {
+                      if (loadingProgress == null) {
+                        return child;
+                      }
+
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    },
                   ),
                 ),
                 SizedBox(height: 16.0),
