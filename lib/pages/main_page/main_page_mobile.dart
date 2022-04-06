@@ -4,6 +4,7 @@ import 'package:murilinho_portfolio/pages/main_page/sections/contact/contact_sec
 import 'package:murilinho_portfolio/pages/main_page/sections/home/home_section.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/nav_bar/nav_bar.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/projects/projects_section.dart';
+import 'package:murilinho_portfolio/widgets/made_with_flutter.dart';
 
 class MainPageMobile extends StatelessWidget {
   @override
@@ -16,7 +17,7 @@ class MainPageMobile extends StatelessWidget {
           left: 68.0,
           right: 0,
           child: ListView(
-            shrinkWrap: true,
+            physics: ClampingScrollPhysics(),
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -32,7 +33,8 @@ class MainPageMobile extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 4.0),
                 child: ContactSection(),
               ),
-              SizedBox(height: 36.0),
+              SizedBox(height: 28.0),
+              MadeWithFlutter(),
             ],
           ),
         ),

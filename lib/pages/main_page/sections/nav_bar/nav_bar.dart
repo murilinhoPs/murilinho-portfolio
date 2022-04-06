@@ -40,7 +40,7 @@ class _NavBarState extends State<NavBar> {
               top: 1,
               bottom: 1,
               child: Container(
-                color: Color(0xff181818),
+                color: darkerBg,
                 height: double.infinity,
                 width: navBarDesktopMinWidth,
               ),
