@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:murilinho_portfolio/pages/main_page/main_page_desktop.dart';
-import 'package:murilinho_portfolio/pages/main_page/main_page_mobile.dart';
+import 'package:murilinho_portfolio/pages/main_page/screen_types/main_page_desktop.dart';
+import 'package:murilinho_portfolio/pages/main_page/screen_types/main_page_mobile.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+class MainPage extends StatelessWidget {
+  final controller = ItemScrollController();
 
-  @override
-  _MainPageState createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ScreenTypeLayout(
-        desktop: MainPageDesktop(),
-        mobile: MainPageMobile(),
+        desktop: MainPageDesktop(controller: controller),
+        mobile: MainPageMobile(controller: controller),
       ),
     );
   }
