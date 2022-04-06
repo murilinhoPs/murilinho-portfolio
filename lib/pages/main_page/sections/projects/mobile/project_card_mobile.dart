@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/projects/model/project_model.dart';
-import 'package:murilinho_portfolio/route/routes_names.dart';
 import 'package:murilinho_portfolio/utils/constants.dart';
 import 'package:murilinho_portfolio/utils/helpers.dart';
 import 'package:murilinho_portfolio/widgets/tag_text_widget.dart';

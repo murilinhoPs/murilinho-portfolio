@@ -27,7 +27,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
           Text(
             Strings.projectsSubtitle,
             style: TextStyle(
-              fontSize: 32,
+              fontSize: 42,
               fontWeight: FontWeight.bold,
               letterSpacing: 1.6,
             ),
@@ -55,9 +55,8 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
                   ? CrossFadeState.showSecond
                   : CrossFadeState.showFirst,
               duration: crossFadeDuration,
-              sizeCurve: Curves.bounceOut,
-              firstCurve: Curves.bounceIn,
-              secondCurve: Curves.bounceInOut,
+              firstCurve: Curves.decelerate,
+              secondCurve: Curves.easeOutBack,
               firstChild: _buildRecentProjects(),
               secondChild: _buildAllProjects(),
               layoutBuilder:
@@ -90,6 +89,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
       children: List.generate(
         projectsTitles.length ~/ 2,
         (i) => ProjectCardDesktop(
+          fontSize: 18,
           imageHeight: 320,
           imageWidth: 520,
           cardWidth: 860,
@@ -126,6 +126,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
           ),
           itemBuilder: (BuildContext context, int i) {
             return ProjectCardDesktop(
+              fontSize: 16,
               imageHeight: 280,
               imageWidth: 460,
               model: ProjectModel(

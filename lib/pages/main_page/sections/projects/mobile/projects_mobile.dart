@@ -27,7 +27,7 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
           Text(
             Strings.projectsSubtitle,
             style: TextStyle(
-              fontSize: 32,
+              fontSize: 28,
               fontWeight: FontWeight.bold,
               letterSpacing: 1.6,
             ),
@@ -55,9 +55,8 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
                   ? CrossFadeState.showSecond
                   : CrossFadeState.showFirst,
               duration: crossFadeDuration,
-              sizeCurve: Curves.bounceOut,
-              firstCurve: Curves.easeIn,
-              secondCurve: Curves.easeOut,
+              firstCurve: Curves.easeInCubic,
+              secondCurve: Curves.decelerate,
               firstChild: _buildRecentProjects(),
               secondChild: _buildAllProjects(),
             ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:murilinho_portfolio/pages/main_page/sections/projects/model/project_model.dart';
-import 'package:murilinho_portfolio/route/routes_names.dart';
 import 'package:murilinho_portfolio/utils/constants.dart';
 import 'package:murilinho_portfolio/utils/helpers.dart';
 import 'package:murilinho_portfolio/widgets/tag_text_widget.dart';
@@ -9,12 +8,14 @@ class ProjectCardDesktop extends StatelessWidget {
   const ProjectCardDesktop({
     Key? key,
     required this.model,
+    required this.fontSize,
     this.imageHeight,
     this.cardHeight,
     this.cardWidth,
     this.imageWidth = 400,
   }) : super(key: key);
   final ProjectModel model;
+  final double fontSize;
   final double? cardWidth;
   final double? cardHeight;
   final double imageWidth;
@@ -41,7 +42,6 @@ class ProjectCardDesktop extends StatelessWidget {
             child: Column(
               children: [
                 Expanded(
-                  flex: 3,
                   child: Image(
                     image: AssetImage(model.imgPath),
                     alignment: Alignment.topCenter,
@@ -70,21 +70,24 @@ class ProjectCardDesktop extends StatelessWidget {
                 ),
                 SizedBox(height: 16.0),
                 if (showDescription)
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(bottom: 4.0, right: 24.0),
-                      child: Text(
-                        model.description!,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 3,
-                        style: TextStyle(
-                          fontSize: 16,
-                          letterSpacing: 1.2,
-                          fontWeight: FontWeight.w300,
-                        ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      bottom: 4.0,
+                      right: 24.0,
+                      left: 12.0,
+                    ),
+                    child: Text(
+                      model.description!,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 3,
+                      style: TextStyle(
+                        fontSize: fontSize,
+                        letterSpacing: 1.2,
+                        fontWeight: FontWeight.w300,
                       ),
                     ),
                   ),
+                SizedBox(height: 32.0),
                 TagTextWidget(
                   text: model.techs,
                   backgroundColor: greyBg,
