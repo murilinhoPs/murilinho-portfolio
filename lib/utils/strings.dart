@@ -22,12 +22,12 @@ class Strings {
   static const nameNavBar = 'Murilo Ps';
   static const nameNavBarMobile = 'Murilo\nPs';
 
-  static const aboutTitle = 'About Me';
   static const homeTitle = 'Home';
   static const projectsTitle = 'Recent Works';
+  static const aboutTitle = 'Get to know me';
   static const contactTitle = 'Get In Touch';
   static const madeWithFlutter = 'Made with flutter 💙';
-  static const projectsSubtitle = r'''Some projects I've done so far''';
+  static const projectsSubtitle = r'''A few projects I've done so far''';
 
   static const homeSubtitle = r'''Hi! I'm Murilo Ps.''';
   static const homeIntro = '> Game Designer and Mobile developer';
@@ -35,13 +35,13 @@ class Strings {
       r'''I'm a Game Designer with focus on programming games using Unity and Unreal Engine and I'm always learning how to improve my games. I also make mobile apps in Flutter, and I'm working with Flutter now!''';
 
   static const aboutMeDescription =
-      r'''I´m Murilo Pescatori Souza, 22 years old and a PwD with Duchenne Muscular Dystrophy based in São Paulo, Brazil. 
+      r'''I´m Murilo Pescatori Souza, 22 years old and a PwD with Duchenne Muscular Dystrophy living in São Paulo, Brazil. 
 
 I have a bachelor's degree in Game Design and now I'm working at a Nubank as a Software Engineer. Since I was a kid I wanted to learn about Game Development, learn how games are made. And now I´m into this marvelous world! 
 
 Even though my focus is on programming, it is important knowing all the process and principles of making games. It makes easier to get feedback and understand how to code the mechanics''';
   static const aboutMeExperience = 'Some of my Experiences: ';
-  static const techsIWorked = 'Technologies I have worked with: ';
+  static const techsIWorked = 'Technologies I already used: ';
   static const resume = 'Resume';
 
   static const recentsProjectsNav = 'Recents';
