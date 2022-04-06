@@ -9,17 +9,6 @@ class AboutSectionDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final experiences = experiencesAbout
-        .map(
-          (exp) => Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 4.0,
-            ),
-            child: Text('$exp,'),
-          ),
-        )
-        .toList();
-
     return Column(
       children: [
         Text(
@@ -30,54 +19,34 @@ class AboutSectionDesktop extends StatelessWidget {
             letterSpacing: 1.6,
           ),
         ),
-        SizedBox(height: 16.0),
+        SizedBox(height: 24.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          verticalDirection: VerticalDirection.up,
           children: [
             Image.asset(
               Assets.meImgFull,
-              height: 320,
+              height: 360,
             ),
             SizedBox(
-              width: 80,
+              width: 64,
             ),
             Expanded(
-              child: Text(
-                Strings.aboutMeDescription,
-                softWrap: true,
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                  height: 1.6,
-                  letterSpacing: 1.2,
-                ),
-              ),
+              child: _buildDescription(),
             ),
           ],
         ),
-        SizedBox(height: 12.0),
-        Divider(color: Colors.grey[600]),
-        SizedBox(height: 12.0),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              Strings.aboutMeExperience,
-              style: TextStyle(
-                fontSize: 20,
-                decoration: TextDecoration.underline,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            SizedBox(width: 12.0),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: experiences,
-            ),
-          ],
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 12.0),
+          child: Divider(
+            color: Colors.grey[600],
+            thickness: 1.6,
+          ),
         ),
-        SizedBox(height: 24.0),
+        _buildExperiences(),
+        SizedBox(height: 36.0),
         MaterialButton(
           hoverColor: primaryColor.withAlpha(150),
           shape: RoundedRectangleBorder(
@@ -87,14 +56,126 @@ class AboutSectionDesktop extends StatelessWidget {
               width: 2.0,
             ),
           ),
-          padding: EdgeInsets.all(12.0),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 40.0,
+            vertical: 20.0,
+          ),
           onPressed: () => launchURL(resumeLink),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 4.0,
+          child: Text(
+            Strings.resume,
+            style: TextStyle(
+              fontSize: 20,
             ),
-            child: Text(Strings.resume),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildDescription() {
+    final techs = tools
+        .map(
+          (tool) => Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                Icons.arrow_right,
+                color: primaryColor,
+              ),
+              Text(
+                tool,
+                style: TextStyle(
+                  fontSize: 14,
+                ),
+              )
+            ],
+          ),
+        )
+        .toList();
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 16.0),
+          child: Text(
+            Strings.aboutMeDescription,
+            softWrap: true,
+            textAlign: TextAlign.start,
+            style: TextStyle(
+              height: 1.4,
+              letterSpacing: 1.2,
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 12.0),
+          child: Divider(
+            color: Colors.grey[600],
+            thickness: 1.6,
+            indent: 16,
+            endIndent: 20,
+          ),
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Text(
+              Strings.techsIWorked,
+              style: TextStyle(
+                color: primaryColor.withOpacity(0.9),
+                fontSize: 20,
+              ),
+            ),
+            const SizedBox(height: 8.0),
+            Wrap(
+              crossAxisAlignment: WrapCrossAlignment.start,
+              runSpacing: 8,
+              spacing: 8,
+              children: techs,
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _buildExperiences() {
+    final experiences = experiencesAbout
+        .map(
+          (exp) => Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 4.0,
+              horizontal: 12.0,
+            ),
+            child: Text(
+              '$exp,',
+              overflow: TextOverflow.ellipsis,
+              softWrap: false,
+              maxLines: 1,
+            ),
+          ),
+        )
+        .toList();
+
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Text(
+          Strings.aboutMeExperience,
+          style: TextStyle(
+            fontSize: 20,
+            decoration: TextDecoration.underline,
+            // fontWeight: FontWeight.w600,
+          ),
+        ),
+        Flexible(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: experiences,
           ),
         ),
       ],
