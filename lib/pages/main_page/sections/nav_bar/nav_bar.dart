@@ -3,9 +3,15 @@ import 'package:murilinho_portfolio/pages/main_page/sections/nav_bar/widgets/hea
 import 'package:murilinho_portfolio/pages/main_page/sections/nav_bar/widgets/social_links.dart';
 import 'package:murilinho_portfolio/utils/constants.dart';
 import 'package:murilinho_portfolio/utils/strings.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class NavBar extends StatefulWidget {
-  const NavBar({Key? key}) : super(key: key);
+  final ItemScrollController controller;
+
+  const NavBar({
+    Key? key,
+    required this.controller,
+  }) : super(key: key);
 
   @override
   _NavBarState createState() => _NavBarState();
@@ -23,6 +29,15 @@ class _NavBarState extends State<NavBar> {
             ? _isMobile = true
             : _isMobile = false,
       );
+
+  void goToSection(int item) {
+    widget.controller.scrollTo(
+      index: item,
+      duration: Duration(milliseconds: 400),
+      curve: Curves.easeInOutCubic,
+      alignment: item > 1 ? 0.4 : 0.0,
+    );
+  }
 
   @override
   void initState() {
@@ -58,6 +73,7 @@ class _NavBarState extends State<NavBar> {
             NavigationRail(
               selectedIndex: _selectedIndex,
               onDestinationSelected: (index) {
+                goToSection(index);
                 setState(() {
                   _selectedIndex = index;
                 });
