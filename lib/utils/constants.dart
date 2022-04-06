@@ -4,6 +4,7 @@ import 'package:murilinho_portfolio/utils/custom_icons.dart';
 
 const Color primaryColor = Color(0xff3ae9a8);
 const Color scecondaryBg = Color(0xff2c344b);
+const Color darkerBg = Color(0xff181818);
 const Color greyBg = Color(0xFF464B58);
 
 const navBarDesktopMinWidth = 200.0;
