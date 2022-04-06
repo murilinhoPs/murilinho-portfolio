@@ -17,28 +17,35 @@ class ContactInfoWidget extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(
+          vertical: 8.0,
+          horizontal: 12.0,
+        ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
             Text('$title:'),
-            SizedBox(width: 16.0),
+            SizedBox(width: 12.0),
             Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(
                   Icons.arrow_right,
                   color: primaryColor,
                 ),
-                onTap == null
-                    ? SelectableText(
-                        info,
-                      )
-                    : Text(
-                        info,
-                        softWrap: true,
-                        overflow: TextOverflow.ellipsis,
-                      )
+                Container(
+                  // constraints:BoxCons
+                  child: onTap == null
+                      ? SelectableText(
+                          info,
+                        )
+                      : Text(
+                          info,
+                          overflow: TextOverflow.ellipsis,
+                          softWrap: false,
+                          maxLines: 1,
+                        ),
+                ),
               ],
             ),
           ],

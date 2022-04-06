@@ -30,7 +30,7 @@ class HomeMobile extends StatelessWidget {
               Text(
                 Strings.homeSubtitle,
                 style: TextStyle(
-                  fontSize: 48,
+                  fontSize: 42,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.6,
                 ),
@@ -39,7 +39,7 @@ class HomeMobile extends StatelessWidget {
               Text(
                 Strings.homeIntro,
                 style: TextStyle(
-                  fontSize: 28,
+                  fontSize: 24,
                   letterSpacing: 1.2,
                 ),
               ),
