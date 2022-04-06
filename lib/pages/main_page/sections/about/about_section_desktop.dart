@@ -151,7 +151,7 @@ class AboutSectionDesktop extends StatelessWidget {
               horizontal: 12.0,
             ),
             child: Text(
-              '$exp,',
+              exp,
               overflow: TextOverflow.ellipsis,
               softWrap: false,
               maxLines: 1,

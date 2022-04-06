@@ -50,8 +50,8 @@ const tools = [
 ];
 
 const experiencesAbout = [
-  'Boticario - Mobile Developer with Flutter',
-  'Nubank - Software Engineer using Flutter and Clojure',
+  'Boticario - Mobile Developer with Flutter,',
+  'Nubank - Software Engineer using Flutter and Clojure,',
   'Game jams - Pogrammer in C# with Unity and C++ with Unreal Engine'
 ];
 
