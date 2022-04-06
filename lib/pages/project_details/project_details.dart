@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:murilinho_portfolio/pages/project_details/project_object.dart';
-import 'package:murilinho_portfolio/route/routes_names.dart';
 
 class ProjectDetailsPage extends StatefulWidget {
   const ProjectDetailsPage({
