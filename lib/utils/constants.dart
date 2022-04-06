@@ -43,6 +43,7 @@ const tools = [
   'Unreal Engine',
   'C#',
   'Unity',
+  'JS',
   'React',
   'Clojure',
 ];
