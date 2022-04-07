@@ -23,21 +23,24 @@ class TagTextWidget extends StatelessWidget {
       child: ConstrainedBox(
         constraints: BoxConstraints(
           minHeight: 36,
+          maxWidth: 160,
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 12.0,
             vertical: 4.0,
           ),
-          child: Text(
-            text,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              height: 1.4,
-              fontSize: 14,
-              letterSpacing: 1.6,
-              fontWeight: FontWeight.w500,
-              color: Colors.grey[200],
+          child: Center(
+            child: Text(
+              text,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                height: 1.4,
+                fontSize: 14,
+                letterSpacing: 1.6,
+                fontWeight: FontWeight.w500,
+                color: Colors.grey[200],
+              ),
             ),
           ),
         ),
