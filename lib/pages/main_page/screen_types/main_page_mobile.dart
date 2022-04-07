@@ -5,10 +5,12 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class MainPageMobile extends StatelessWidget {
   final ItemScrollController controller;
+  final ItemPositionsListener scrollListener;
 
   const MainPageMobile({
     Key? key,
     required this.controller,
+    required this.scrollListener,
   }) : super(key: key);
 
   @override
@@ -23,12 +25,16 @@ class MainPageMobile extends StatelessWidget {
           child: ScrollablePositionedList.builder(
             itemCount: 5,
             itemScrollController: controller,
+            itemPositionsListener: scrollListener,
             physics: ClampingScrollPhysics(),
             itemBuilder: (context, index) => MainSectionContentBuilder(
                 index: index, spacing: index == 3 ? 4 : 28.0),
           ),
         ),
-        NavBar(controller: controller),
+        NavBar(
+          controller: controller,
+          scrollListener: scrollListener,
+        ),
       ],
     );
   }

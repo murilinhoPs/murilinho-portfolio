@@ -6,13 +6,20 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class MainPage extends StatelessWidget {
   final controller = ItemScrollController();
+  final scrollListener = ItemPositionsListener.create();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ScreenTypeLayout(
-        desktop: MainPageDesktop(controller: controller),
-        mobile: MainPageMobile(controller: controller),
+        desktop: MainPageDesktop(
+          controller: controller,
+          scrollListener: scrollListener,
+        ),
+        mobile: MainPageMobile(
+          controller: controller,
+          scrollListener: scrollListener,
+        ),
       ),
     );
   }

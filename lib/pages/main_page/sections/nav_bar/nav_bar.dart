@@ -7,10 +7,12 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class NavBar extends StatefulWidget {
   final ItemScrollController controller;
+  final ItemPositionsListener scrollListener;
 
   const NavBar({
     Key? key,
     required this.controller,
+    required this.scrollListener,
   }) : super(key: key);
 
   @override
@@ -30,6 +32,27 @@ class _NavBarState extends State<NavBar> {
             : _isMobile = false,
       );
 
+  void setNavgationIndex(int index) => setState(() => _selectedIndex = index);
+
+  void checkCurrentSection() {
+    final section = widget.scrollListener.itemPositions.value
+        .where((item) {
+          final isVisible = item.itemLeadingEdge >= 0;
+
+          return isVisible;
+        })
+        .map(
+          (item) => item.index,
+        )
+        .toList();
+
+    if (section.isEmpty) return;
+
+    final index = section[0];
+    setNavgationIndex(index);
+    print(section[0]);
+  }
+
   void goToSection(int item) {
     widget.controller.scrollTo(
       index: item,
@@ -42,6 +65,7 @@ class _NavBarState extends State<NavBar> {
   @override
   void initState() {
     WidgetsBinding.instance!.addPostFrameCallback((_) => checkDeviceScreen());
+    widget.scrollListener.itemPositions.addListener(checkCurrentSection);
     super.initState();
   }
 
@@ -74,9 +98,7 @@ class _NavBarState extends State<NavBar> {
               selectedIndex: _selectedIndex,
               onDestinationSelected: (index) {
                 goToSection(index);
-                setState(() {
-                  _selectedIndex = index;
-                });
+                setNavgationIndex(index);
               },
               extended: !_isMobile,
               backgroundColor: Colors.transparent,

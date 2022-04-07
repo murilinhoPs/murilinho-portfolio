@@ -5,10 +5,12 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class MainPageDesktop extends StatelessWidget {
   final ItemScrollController controller;
+  final ItemPositionsListener scrollListener;
 
   const MainPageDesktop({
     Key? key,
     required this.controller,
+    required this.scrollListener,
   }) : super(key: key);
 
   @override
@@ -16,11 +18,15 @@ class MainPageDesktop extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        NavBar(controller: controller),
+        NavBar(
+          controller: controller,
+          scrollListener: scrollListener,
+        ),
         Expanded(
           child: ScrollablePositionedList.builder(
             itemCount: 5,
             itemScrollController: controller,
+            itemPositionsListener: scrollListener,
             physics: ClampingScrollPhysics(),
             itemBuilder: (context, index) =>
                 MainSectionContentBuilder(index: index, spacing: 28.0),
