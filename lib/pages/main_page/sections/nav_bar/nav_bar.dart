@@ -34,6 +34,15 @@ class _NavBarState extends State<NavBar> {
 
   void setNavgationIndex(int index) => setState(() => _selectedIndex = index);
 
+  void goToSection(int item) {
+    widget.controller.scrollTo(
+      index: item,
+      duration: Duration(milliseconds: 400),
+      curve: Curves.easeInOutCubic,
+      alignment: item > 1 ? 0.4 : 0.0,
+    );
+  }
+
   void checkCurrentSection() {
     final section = widget.scrollListener.itemPositions.value
         .where((item) {
@@ -46,20 +55,10 @@ class _NavBarState extends State<NavBar> {
         )
         .toList();
 
-    if (section.isEmpty) return;
+    if (section.isEmpty || !mounted) return;
 
-    final index = section[0];
+    final index = !_isMobile && section.length > 2 ? section[1] : section[0];
     setNavgationIndex(index);
-    print(section[0]);
-  }
-
-  void goToSection(int item) {
-    widget.controller.scrollTo(
-      index: item,
-      duration: Duration(milliseconds: 400),
-      curve: Curves.easeInOutCubic,
-      alignment: item > 1 ? 0.4 : 0.0,
-    );
   }
 
   @override
