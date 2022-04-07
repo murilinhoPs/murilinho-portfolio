@@ -19,7 +19,6 @@ class ContactInfoWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 8.0,
-          horizontal: 12.0,
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
@@ -33,19 +32,16 @@ class ContactInfoWidget extends StatelessWidget {
                   Icons.arrow_right,
                   color: primaryColor,
                 ),
-                Container(
-                  // constraints:BoxCons
-                  child: onTap == null
-                      ? SelectableText(
-                          info,
-                        )
-                      : Text(
-                          info,
-                          overflow: TextOverflow.ellipsis,
-                          softWrap: false,
-                          maxLines: 1,
-                        ),
-                ),
+                onTap == null
+                    ? SelectableText(
+                        info,
+                      )
+                    : Text(
+                        info,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                        softWrap: false,
+                      ),
               ],
             ),
           ],

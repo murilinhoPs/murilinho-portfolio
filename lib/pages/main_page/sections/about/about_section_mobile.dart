@@ -139,10 +139,10 @@ class AboutSectionMobile extends StatelessWidget {
               vertical: 4.0,
             ),
             child: Text(
-              '$exp,',
+              '• $exp',
               overflow: TextOverflow.ellipsis,
               softWrap: false,
-              maxLines: 1,
+              maxLines: 2,
             ),
           ),
         )
