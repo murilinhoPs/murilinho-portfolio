@@ -19,6 +19,7 @@ class ContactInfoWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 8.0,
+          horizontal: 12.0,
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,

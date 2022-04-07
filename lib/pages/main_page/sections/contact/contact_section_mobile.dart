@@ -29,7 +29,7 @@ class ContactSectionMobile extends StatelessWidget {
         ),
         ContactInfoWidget(
           title: linkedinTitle,
-          info: linkedinLink,
+          info: linkedinLink.replaceAll('https://', ''),
           onTap: () => launchURL(linkedinLink),
         ),
       ],
