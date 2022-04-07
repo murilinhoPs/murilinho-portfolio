@@ -38,13 +38,7 @@ class AboutSectionDesktop extends StatelessWidget {
             ),
           ],
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 12.0),
-          child: Divider(
-            color: Colors.grey[600],
-            thickness: 1.6,
-          ),
-        ),
+        SizedBox(height: 36.0),
         _buildExperiences(),
         SizedBox(height: 36.0),
         MaterialButton(
@@ -66,6 +60,13 @@ class AboutSectionDesktop extends StatelessWidget {
             style: TextStyle(
               fontSize: 20,
             ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 12.0),
+          child: Divider(
+            color: Colors.grey[600],
+            thickness: 1.6,
           ),
         ),
       ],
@@ -113,8 +114,8 @@ class AboutSectionDesktop extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 12.0),
           child: Divider(
             color: Colors.grey[600],
-            thickness: 1.6,
-            indent: 16,
+            thickness: 1.0,
+            indent: 0,
             endIndent: 20,
           ),
         ),
@@ -168,8 +169,8 @@ class AboutSectionDesktop extends StatelessWidget {
           Strings.aboutMeExperience,
           style: TextStyle(
             fontSize: 20,
-            decoration: TextDecoration.underline,
-            // fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w600,
+            color: primaryColor.withOpacity(0.9),
           ),
         ),
         Flexible(

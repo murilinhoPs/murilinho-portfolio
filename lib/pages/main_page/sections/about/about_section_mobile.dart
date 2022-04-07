@@ -28,13 +28,7 @@ class AboutSectionMobile extends StatelessWidget {
           height: 32,
         ),
         _buildDescription(),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 12.0),
-          child: Divider(
-            color: Colors.grey[600],
-            thickness: 1.6,
-          ),
-        ),
+        SizedBox(height: 24.0),
         _buildExperiences(),
         SizedBox(height: 24.0),
         MaterialButton(
@@ -56,6 +50,13 @@ class AboutSectionMobile extends StatelessWidget {
             style: TextStyle(
               fontSize: 16,
             ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 12.0),
+          child: Divider(
+            color: Colors.grey[600],
+            thickness: 1.6,
           ),
         ),
       ],
@@ -102,9 +103,9 @@ class AboutSectionMobile extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 12.0),
           child: Divider(
             color: Colors.grey[600],
-            thickness: 1.6,
-            indent: 24,
-            endIndent: 24,
+            thickness: 1.2,
+            indent: 4,
+            endIndent: 16,
           ),
         ),
         Column(
@@ -113,6 +114,7 @@ class AboutSectionMobile extends StatelessWidget {
             Text(
               Strings.techsIWorked,
               style: TextStyle(
+                fontSize: 16,
                 color: primaryColor.withOpacity(0.9),
               ),
             ),
@@ -156,15 +158,13 @@ class AboutSectionMobile extends StatelessWidget {
           Strings.aboutMeExperience,
           style: TextStyle(
             fontSize: 16,
-            decoration: TextDecoration.underline,
             fontWeight: FontWeight.w600,
+            color: primaryColor.withOpacity(0.9),
           ),
         ),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: experiences,
-          ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: experiences,
         ),
       ],
     );
